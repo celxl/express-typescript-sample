@@ -1,0 +1,28 @@
+{
+  "name": "express-typescript",
+  "version": "1.0.0",
+  "description": "Basic express+typescript server, with dynamic routes and global error handler",
+  "keywords": ["express", "typescript", "error-handling"],
+  "main": "server.js",
+  "scripts": {
+    "dev": "NODE_ENV=dev nodemon app.ts",
+    "start": "ts-node app.ts",
+    "test": "jest"
+  },
+  "author": "Fidel Pérez Celorio",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "glob": "^10.2.5"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/morgan": "^1.9.4",
+    "@types/node": "^20.2.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  }
+}
