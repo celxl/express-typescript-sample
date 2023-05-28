@@ -44,6 +44,33 @@ where *baseUrl* is the base url you want to give to that controller ex baseUrl =
  **src/commons/exceptions.ts** defines most common http errors you can of course add or remove whatever you need but the idea should be clear. Whenever is needed to throw special error intended for FE client this come handy, and the function *globalErrorHandler* will take care of sending the error to FE with the desired status code.  
  Take a look to **src/controllers/error-test.controller.ts** to see an example of how errors are show to FE. run ```curl localhost:3000/v1/exceptions/bad_req``` and see API response and logs in your terminal
 
+## Documentation
+ Documenting your Rest APIs si a crucial part of every development process, your team needs to be aware how your APIs works. From your Frontend developers who will constantly using the documentation to create a good client for the project, to the QA team that needs to know what is going on so testing become possible. But further for yourself because after some weeks you will start forgetting what you did.
+
+### TIP
+ For a junior developer that is just starting with *nodejs* and *express*  Rest APIs is maybe best to don't put much attention here just jet, documentation is **super important**  but first you need to focus in learning how things work
+
+### OpenApi specification and swagger client
+ OpenApi is a mature standard used for APIs documentation and generally is used combined with a swagger client allowing to visualize and test those APIs.
+
+# Dependencies
+ * express - nodejs server
+ * dotenv - to work with environment variables
+ * glob - to dynamically load your controllers without the need to create separate files for routes
+
+## Dev Dependencies
+ * @types/express
+ * @types/morgan
+ * @types/node
+ * @types/swagger-jsdoc - For API documentation
+ * @types/swagger-ui-express - For API documentation
+ * morgan
+ * nodemon,
+ * swagger-jsdoc - For API documentation
+ * swagger-ui-express - For API documentation
+ * ts-node
+ * typescript
+
 # Help
 More than anything i made this to remind myself how to easily set up an express server with typescript to load routes dynamically but im happy to respond questions and accept suggestions so don hesitate in reaching out
 

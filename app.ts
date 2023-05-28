@@ -4,6 +4,9 @@ import { glob } from 'glob'
 import path from "path";
 import { config } from "dotenv";
 import { globalErrorHandler } from "./src/commons/exceptions";
+import swaggerJsdoc from "swagger-jsdoc";
+import swaggerUi from  "swagger-ui-express";
+import { SwaggerOptions } from "./src/commons/api-doc";
 
 config();
 
@@ -16,6 +19,19 @@ const
 
 process.env.NODE_ENV === 'dev' && app.use(morgan('dev'));
 
+app.use(express.json())
+
+/**
+ * Load APIs documentation (swagger client) only for dev environment, normally we don't want APIs info expose on production
+ */
+if (process.env.NODE_ENV == 'dev') {
+    const specs = swaggerJsdoc(SwaggerOptions);
+    app.use(
+        "/api-docs",
+        swaggerUi.serve,
+        swaggerUi.setup(specs)
+    );
+}
 
 /**
  * Dynamically add application routes
