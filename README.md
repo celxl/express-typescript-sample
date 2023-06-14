@@ -1,9 +1,20 @@
 # Basic example to use express+typescript server loading routes dynamically
 
+## Additional points
+ * Documentation using OpenAPi specification (swagger)
+ * Use of data transformation object (DTO)
+ * Input data validation
+ * Input data transformation
+ * Input data sanitation
+ * Output data clean
+
 ## Problem
  Well not really a problem or issue, this solution is more about simplicity. When using express for your nodejs backend server
  there is a need to define the routes where endpoints will live, and while the structure of the project is entirely up to you, base on
- preference or project requirements defining the routes can be enjoying or even lead to dummy errors.
+ preference or project requirements defining the routes can be enjoying or even lead to dummy errors.  
+
+ Additional this repo can be used as base code snippet to start any express project
+
 
 ## Solution
  This implementation tries to show a way we simplify routes loading and routes binding to controllers.  
@@ -57,6 +68,9 @@ where *baseUrl* is the base url you want to give to that controller ex baseUrl =
  * express - nodejs server
  * dotenv - to work with environment variables
  * glob - to dynamically load your controllers without the need to create separate files for routes
+ * class-transformer - to use the DTO concept
+ * class-validator - to use the DTO concept
+ * class-sanitizer - to use the DTO concept
 
 ## Dev Dependencies
  * @types/express
