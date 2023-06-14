@@ -3,7 +3,7 @@ import morgan from 'morgan';
 import { glob } from 'glob'
 import path from "path";
 import { config } from "dotenv";
-import { globalErrorHandler } from "./src/commons/exceptions";
+import { globalErrorHandler } from "./src/middlewares/error-handler.middleware";
 import swaggerJsdoc from "swagger-jsdoc";
 import swaggerUi from  "swagger-ui-express";
 import { SwaggerOptions } from "./src/commons/api-doc";

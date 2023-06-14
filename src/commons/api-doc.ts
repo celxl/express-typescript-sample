@@ -19,5 +19,10 @@ export const SwaggerOptions = {
         },
       ],
     },
-    apis: ["src/controllers/common_swagger_definitions.ts", "src/controllers/*.controller.ts", "src/models/*.model.ts"],
+    apis: [
+      "src/controllers/common_swagger_definitions.ts",
+      "src/controllers/*.controller.ts",
+      "src/models/*.model.ts",
+      "src/dtos/*.dto.ts"
+    ],
   };
